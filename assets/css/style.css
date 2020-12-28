@@ -22,7 +22,8 @@
 /*===========================
       1. COMMON css 
 ===========================*/
-/* @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800"); */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 body {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
@@ -117,7 +118,7 @@ p {
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
+  float: right;
   height: 100%;
 }
 
@@ -1724,9 +1725,37 @@ p {
 .about-area {
   position: relative;
   /* background-color: #f4f6f7; */
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
+
+.free-quote {
+  position: relative;
+  background-color: #fff;
+}
+
+.input-quote{
+  border-color: #00d0e0;
+}
+
+.submit-btn{
+  color: #FFF;
+  background: -webkit-linear-gradient(
+    left,
+    #43cae9 0%,
+    #00d0e0 50%,
+    #43cae9 100%
+  );
+  margin-left: -1rem;
+  height: 46px;
+  margin-top: -2px;
+}
+
+.section-title{
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 55px;
+  color: #2a454e;
+}
+
 .about-area .section-title .title {
   font-size: 44px;
   font-weight: 600;
@@ -1757,8 +1786,13 @@ p {
 .single-about {
   box-shadow: 0 16px 48px #e2e8ed;
   padding: 20px;
-  height: 200px;
 }
+@media only screen and (max-width: 576px) {
+  .single-about {
+    text-align: center;
+  }
+}
+
 .single-about .about-icon img {
   width: 120px;
 }
@@ -2739,7 +2773,6 @@ p {
       20.CONTACT css 
 ===========================*/
 .contact-area {
-  padding-top: 95px;
   padding-bottom: 100px;
   background-color: #f4f6f7;
 }
@@ -2842,7 +2875,7 @@ p {
 }
 .form-input .input-items input,
 .form-input .input-items textarea {
-  width: 100%;
+  width: 80%;
   height: 44px;
   border: 2px solid #6e8f9c;
   padding-left: 44px;
@@ -2909,10 +2942,10 @@ p {
   }
 }
 .footer-area .footer-widget .footer-title {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 18px;
-  color: #6e8f9c;
+  color: #2a454e;
 }
 
 .footer-area .footer-widget .footer-link ul {
@@ -2921,9 +2954,9 @@ p {
 .footer-area .footer-widget .footer-link ul li a {
   font-size: 16px;
   line-height: 24px;
-  color: #2a454e;
+  color: #6e8f9c;
   margin-top: 16px;
-  font-weight: 500;
+  font-weight: normal;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -3007,4 +3040,7 @@ p {
   background-color: #00d0e0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.form-submitted-feedback{
+  padding-top: 1rem;
+  color: #3BC15A;
+}

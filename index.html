@@ -20,6 +20,7 @@
 
     <!--====== Line Icons css ======-->
     <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 
     <!--====== Magnific Popup css ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -41,15 +42,47 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
         rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2L9pxVn_kxf42NXBI6-9fz-9aVX8BD7E&callback=initMap&libraries=places&v=weekly"
+        defer></script>
 
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Isotope js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!--====== Images Loaded js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Scrolling js ======-->
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
 </head>
 
 <body>
 
     <!--====== PRELOADER PART START ======-->
 
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
                 <div class="ytp-spinner-container">
@@ -64,7 +97,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--====== PRELOADER PART ENDS ======-->
 
@@ -108,8 +141,8 @@
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" id="residentDropdownMenu"
-                                            href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        <a class="nav-link dropdown-toggle" id="residentDropdownMenu" href="#"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Residents</a>
                                         <div class="dropdown-menu" aria-labelledby="residentDropdownMenu">
                                             <a class="dropdown-item" href="#">Resident portal</a>
@@ -136,8 +169,9 @@
             <div class="bd-example">
                 <div id="carouselOne" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item bg_cover active"
-                            style="background-image: url(assets/images/slider-building.png)">
+
+                        <div class="carousel-item active">
+                            <img class="d-none d-sm-flex bg_cover " src="assets/images/slider-building.png">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-start text-left">
@@ -145,11 +179,13 @@
                                             <h1 class="carousel-title mb-2">We make
                                                 property management
                                                 easy for you.</h1>
-                                                <div class="dropdown-divider"></div>
-                                            <p style="color: #6e8f9c">Comprehensive property management solutions for homeowners and real estate investors.</p>
+                                            <div class="d-none d-sm-block dropdown-divider"></div>
+                                            <p style="color: #6e8f9c">Comprehensive property management solutions for
+                                                homeowners and real estate investors.</p>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <!-- <div class="dropdown-divider"></div> -->
-                                                <li><a class="main-btn rounded-three mt-3 page-scroll" href="#pricing">Princing and plans</a>
+                                                <li><a class="main-btn rounded-three mt-3 page-scroll"
+                                                        href="#pricing">Princing and plans</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -168,12 +204,12 @@
 
     <!--====== ABOUT PART START ======-->
 
-    <section id="about" class="about-area">
+    <section id="about" class="about-area mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12 col-lg-12">
                     <div class="section-title text-center mt-30 pb-40">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">What we do</h4>
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">What we do?</h4>
                         <p class="text wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">Our approach is
                             simple. We provide professional, trustworthy property management services. Whether you are
                             an investor with several homes or an unintentional landlord, we have a solution for you.</p>
@@ -182,7 +218,7 @@
             </div> <!-- row -->
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-4 col-sm-8">
                     <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s"
                         data-wow-delay="1.2s">
                         <div class="about-icon">
@@ -205,7 +241,8 @@
                         <div class="about-content media-body">
                             <h4 class="about-title">Tenant Screening</h4>
                             <p class="text">We conduct extensive screening on all tenants and handle everything from
-                                moving your qualified tenant into their new home, to rent collection.</p>
+                                moving your qualified tenant into their new home, to rent collection, to handling
+                                maintenance issues.</p>
                         </div>
                     </div> <!-- single about -->
                 </div>
@@ -217,8 +254,9 @@
                         </div>
                         <div class="about-content media-body">
                             <h4 class="about-title">Rent Collection</h4>
-                            <p class="text">We utilize auto-debit, online payments and immediate past due follow up to
-                                make sure you get paid on time, every time.</p>
+                            <p class="text">We use online payments and immediately follow up on past due payments to
+                                make sure you get paid on time. You no longer have to worry about rent showing up in
+                                your bank account.</p>
                         </div>
                     </div> <!-- single about -->
                 </div>
@@ -249,7 +287,7 @@
 
     <!--====== PRINICNG STYLE EIGHT START ======-->
 
-    <section id="pricing" class="pricing-area">
+    <section id="pricing" class="pricing-area mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -299,7 +337,8 @@
                         <div class="pricing-list">
                             <ul>
                                 <li>Includes:</li>
-                                <li class="font-weight-bold"><i class="lni-check-mark-circle"></i> Rent collection service Plus:</li>
+                                <li class="font-weight-bold"><i class="lni-check-mark-circle"></i> Rent collection
+                                    service Plus:</li>
                                 <li><i class="lni-check-mark-circle"></i> Monthly statements</li>
                                 <li><i class="lni-check-mark-circle"></i> Maintenance management</li>
                                 <li><i class="lni-check-mark-circle"></i> Rent analysis</li>
@@ -325,7 +364,8 @@
                         <div class="pricing-list">
                             <ul>
                                 <li>Includes:</li>
-                                <li class="font-weight-bold"><i class="lni-check-mark-circle"></i>Full service Plus:</li>
+                                <li class="font-weight-bold"><i class="lni-check-mark-circle"></i>Full service Plus:
+                                </li>
                                 <li><i class="lni-check-mark-circle"></i> 2 Annual inspections</li>
                                 <li><i class="lni-check-mark-circle"></i> Manage move ins/move outs</li>
                                 <li><i class="lni-check-mark-circle"></i> 1099 Filing</li>
@@ -345,19 +385,45 @@
     <!--====== PRINICNG STYLE EIGHT ENDS ======-->
 
     <!--====== CLIENT LOGO PART START ======-->
+    <section id="quote" class="free-quote mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center pb-20">
+                        <h3 class="title">Free Rental Analysis</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="infowindow-content">
+                <img src="" width="16" height="16" id="place-icon" />
+                <span id="place-name" class="title"></span><br />
+                <span id="place-address"></span>
+            </div>
+            <div class="row">
+                <div id="map"></div>
+                <form id="contact-form1" class="col-12" action="assets/contact.php" method="post">
+                    <div class="form-input mt-15" id="pac-card">
+                        <div class="input-items default">
+                            <input id="pac-input" class="input-quote" type="text"
+                                placeholder="Enter your property address..." name="name"
+                                style="padding:22p; height: 45px">
+                            <button type="submit" class="main-btn submit-btn">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
 
     <!--====== CLIENT LOGO PART ENDS ======-->
 
     <!--====== CONTACT TWO PART START ======-->
 
-    <section id="contact" class="contact-area">
+    <section id="contact" class="contact-area mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="section-title text-center pb-20">
+                    <div class="section-title text-center pb-20 mt-5">
                         <h3 class="title">Contact Us</h3>
-                        <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get
-                            results. Happiness guaranteed!</p> -->
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -378,38 +444,53 @@
                 <div class="col-lg-6">
                     <div class="contact-form form-style-one mt-35 wow fadeIn" data-wow-duration="1.5s"
                         data-wow-delay="0.5s">
-                        <form id="contact-form" action="assets/contact.php" method="post">
+                        <form id="contact-form" class="needs-validation" onsubmit="return false" novalidate>
                             <div class="form-input mt-15">
                                 <label>Name</label>
                                 <div class="input-items default">
-                                    <input type="text" placeholder="Name" name="name">
+                                    <input  class="form-control" type="text" placeholder="Name" name="name" required>
                                     <i class="lni-user"></i>
+                                    <div class="invalid-feedback">
+                                        Please provide a name.
+                                    </div>
                                 </div>
                             </div> <!-- form input -->
                             <div class="form-input mt-15">
                                 <label>Email</label>
                                 <div class="input-items default">
-                                    <input type="email" placeholder="Email" name="email">
+                                    <input class="form-control" type="email" placeholder="Email" name="email" required>
                                     <i class="lni-envelope"></i>
+                                    <div class="invalid-feedback">
+                                        Please provide an email.
+                                    </div>
                                 </div>
                             </div> <!-- form input -->
                             <div class="form-input mt-15">
                                 <label>Phone number</label>
                                 <div class="input-items default">
-                                    <input type="phone" placeholder="phone" name="phone">
+                                    <input  class="form-control" type="phone" placeholder="phone" name="phone" required>
                                     <i class="lni-phone"></i>
+                                    <div class="invalid-feedback">
+                                        Please provide a phone number.
+                                    </div>
                                 </div>
                             </div> <!-- form input -->
                             <div class="form-input mt-15">
                                 <label>Message</label>
                                 <div class="input-items default">
-                                    <textarea placeholder="Message" name="message"></textarea>
+                                    <textarea  class="form-control" placeholder="Message" name="message" required></textarea>
                                     <i class="lni-pencil-alt"></i>
+                                    <div class="invalid-feedback">
+                                        Please write a message.
+                                    </div>
                                 </div>
                             </div> <!-- form input -->
-                            <p class="form-message"></p>
                             <div class="form-input rounded-buttons mt-20">
-                                <button type="submit" class="main-btn rounded-three">Submit</button>
+                                <button id="contact-us-submit-btn" class="main-btn rounded-three" href="mailto:info@almeidaproperties.com">Submit form</button>
+                                <div class="form-submitted-feedback d-none">
+                                    <i class="lni lni-checkmark-circle"></i>
+                                    Thank you for contacting us, we will get in touch shortly!
+                                </div>
                             </div> <!-- form input -->
                         </form>
                     </div> <!-- contact form -->
@@ -426,13 +507,13 @@
         <div class="footer-widget">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 mr-80">
-                        <div class="footer-logo text-center mt-10">
+                    <div class="col-lg-3 col-md-4 col-sm-8 mr-80">
+                        <div class="footer-logo text-center mt-40">
                             <a href="index.html"><img src="assets/images/ap-logo.png" alt="Logo"></a>
                         </div> <!-- footer logo -->
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="footer-link">
+                    <div class="col-lg-3 col-md-4 col-sm-8">
+                        <div class="footer-link mt-45">
                             <h6 class="footer-title">Company</h6>
                             <ul>
                                 <li><a class="page-scroll" href="#about">About</a></li>
@@ -440,8 +521,8 @@
                             </ul>
                         </div> <!-- footer link -->
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="footer-link">
+                    <div class="col-lg-3 col-md-4 col-sm-8">
+                        <div class="footer-link mt-45">
                             <h6 class="footer-title">Product & Services</h6>
                             <ul>
                                 <li><a class="page-scroll" href="#pricing">Pricing and plans</a></li>
@@ -482,35 +563,6 @@
 
     <!--====== BACK TOP TOP PART ENDS ======-->
 
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-
-    <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
-
-    <!--====== Isotope js ======-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-
-    <!--====== Images Loaded js ======-->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-    <!--====== Scrolling js ======-->
-    <script src="assets/js/scrolling-nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-
-    <!--====== wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
-
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
 
 </body>
 
